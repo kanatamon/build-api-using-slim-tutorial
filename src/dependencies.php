@@ -26,7 +26,7 @@ $container['pdo'] = function ($c) {
     $pass = $db['pass'];
 
     $options = array(
-        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8 COLLATE utf8_unicode_ci',
+        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . $db['charset_name'] .'COLLATE ' . $db['collation_name'],
     );
     $pdo = new PDO($dsn, $user, $pass, $options);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

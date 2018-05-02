@@ -22,6 +22,8 @@ return [
             'user' => '<USERNAME>',
             'pass' => '<PASSWORD',
             'dbname' => '<DABASE_NAME>',
+            'charset_name' => 'utf8',
+            'collation_name' => 'utf8_unicode_ci',
         ],
     ],
 ];
